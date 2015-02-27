@@ -133,15 +133,15 @@ Inside our link block we can write the code necessary to show our pending spinne
 
 ####Steps to complete the "pending" directive
 
-+ Hide, disable, or change the text of the submit button
-+ Show a spinning icon or gif while we wait for our data
-+ Hide the spinner when our data returns
-+ Reset the submit button to its original condition
-+ You may need to use $q and setup some promises
-+ Inject $q into the directive not the link function
-+ remember scope.request === to the function on the controller.
-+ Don't let your controller function start until the "element" is "clicked"
-+ Make sure your controller function is returning itself and its promise.
++ Hide, disable, or change the text of the submit button - elem.text
++ Show a spinning icon or gif while we wait for our data - set up a toggle function
++ Hide the spinner when our data returns - in the resolve part of promise toggle the spinner
++ Reset the submit button to its original condition - retoggle the submit button
++ You may need to use $q and setup some promises - this is how you toggle
++ Inject $q into the directive not the link function - function($q)
++ remember scope.request === to the function on the controller. - 
++ Don't let your controller function start until the "element" is "clicked" - use an 'on click'
++ Make sure your controller function is returning itself and its promise. - 
 + This will be difficult, don't give up. Tackle one problem at a time.
 
 ###Step 3
